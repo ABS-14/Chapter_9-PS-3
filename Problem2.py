@@ -8,7 +8,7 @@ def game():
     print("You are playing the game..")
     score = random.randint(1, 62)
     # Fetch the hiscore
-    with open("C:/Users/Admin/OneDrive/Desktop/Computing Programms/Python/Chapter_9/Chapter_9-PS/hiscore.txt") as f:
+    with open("filename/filepath") as f:
         hiscore = f.read().strip() # Remove spaces at the beginning and at the end of the string:
         if(hiscore!=""):
              hiscore = max([int(s) for s in hiscore.split('\n')])
@@ -18,7 +18,7 @@ def game():
     print(f"Your score: {score}")
     if(score>hiscore):
         # write this hiscore to the file
-        with open("C:/Users/Admin/OneDrive/Desktop/Computing Programms/Python/Chapter_9/Chapter_9-PS/hiscore.txt", "w") as f:
+        with open("filename/filepath", "w") as f:
             f.write(str(score))
 
     return score
